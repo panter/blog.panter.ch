@@ -1,0 +1,10 @@
+= wrap_layout :layout do
+  .article-detail.container
+    %article
+      %h1
+        = current_article.title
+        %time
+          = current_article.date.strftime('%b %e %Y')
+      = yield
+      %p
+        = link_to '&laquo; Zurück zur Übersicht', '/', class: 'back'

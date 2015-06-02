@@ -1,0 +1,129 @@
+$header-color: #282828
+$footer-color: #efefef
+$title-color: #282828
+$link-color: #282828
+$text-color: lighten($title-color, 15%)
+$footer-height: 150px
+$font: 'Cardo', serif
+
+=respond-to($media)
+  @if $media == md
+    @media (min-width: 768px)
+      @content
+
+  @else if $media == lg
+    @media (min-width: 960px)
+      @content
+
+html, body
+  height: 100%
+
+*
+  box-sizing: border-box
+  text-rendering: optimizeLegibility
+
+article
+  color: $text-color
+
+  h1
+    color: $title-color
+    line-height: 1em
+    margin-bottom: 1em
+
+    a
+      text-decoration: none
+
+  time
+    display: block
+    color: lighten($text-color, 20%)
+    font-size: 16px
+    margin-top: 0.5em
+
+p, li, .more
+  line-height: 1.4em
+  font-size: 20px
+  font-family: $font
+
+  +respond-to(md)
+    font-size: 22px
+
+p
+  margin-bottom: 1.25em
+
+li
+  background: image_url("li.svg") no-repeat
+  background-size: 1em
+  background-position: 0 0.6em
+  padding-left: 1.5em
+  margin-left: 0.5em
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+a
+  &:link, &:active, &:visited
+    color: $link-color
+
+  &:hover
+    color: lighten($link-color, 10%)
+
+.header
+  background: $header-color
+  height: 60px
+  width: 100%
+
+.logo
+  background: image-url("panter.svg") no-repeat
+  background-size: 100%
+  width: 100px
+  height: 40px
+  display: block
+  top: 15px
+  position: relative
+
+.page-wrapper
+  min-height: 100%
+  margin-bottom: -$footer-height
+
+  &:after
+    content: ""
+    display: block
+    height: $footer-height
+
+.container
+  max-width: 700px
+  position: relative
+
+  +respond-to(lg)
+    margin: 0 auto
+
+.article-list,
+.article-detail
+  margin: 50px 20px
+
+  +respond-to(lg)
+    margin:
+      top: 50px
+      bottom: 50px
+      left: auto
+      right: auto
+
+.footer
+  height: $footer-height
+  background: $footer-color
+  padding: 20px
+
+.back, .more
+  text-decoration: none
+  transition: transform 0.3s
+  transform: translateX(0)
+  display: block
+
+  &:hover
+    transform: translateX(-10px)
+
+.more
+  &:hover
+    transform: translateX(10px)

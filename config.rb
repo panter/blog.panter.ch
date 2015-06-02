@@ -46,12 +46,13 @@
 #     "Helping"
 #   end
 # end
-activate :blog
+activate :blog do |blog|
+  blog.layout = "article"
+  blog.paginate = true
+end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration

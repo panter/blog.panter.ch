@@ -1,8 +1,16 @@
 ---
 title: Welcome to Middleman
+pageable: true
+published: false
 ---
 
-.welcome
-  %h1 Welcome Dude
-  .doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
+.article-list.container
+  - page_articles.each do |article|
+    %article
+      %h1
+        %a{ href: article.url }
+          = article.title
+          %time
+            = article.date.strftime('%b %e %Y')
+      = article.summary
+      = link_to '&raquo; Mehr lesen', article.url, class: 'more'
