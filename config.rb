@@ -58,17 +58,40 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+
+  activate :favicon_maker do |f|
+    f.template_dir  = File.join(root, 'source', 'images', 'favicon')
+    f.icons = {
+      'apple-touch-icon-precomposed.png' => [
+        { icon: 'apple-touch-icon-152x152-precomposed.png' },
+        { icon: 'favicon.ico', size: '64x64,32x32,24x24,16x16' },
+      ]
+    }
+  end
+
+  activate :imageoptim, :pngout => false, :svgo => false
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host = 'panter.ch'
+  deploy.user = 'panterch'
+  deploy.clean = true
+
+  deploy.path = 'blog.panter.ch'
+
+  deploy.flags = '-avz'
 end
