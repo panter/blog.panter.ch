@@ -2,7 +2,6 @@
 title: Panter die demokratische Firma
 date: 2015-06-12 08:42 UTC
 tags:
-published: false
 ---
 
 > Ein Lohnmodell, welches genau zwei Stufen kennt und für alle Mitarbeiter
