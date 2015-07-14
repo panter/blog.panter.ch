@@ -66,12 +66,12 @@ Erfolg der Unternehmung interessiert wären, würde das System wahrscheinlich ni
 funktionieren. Aus diesem Grund ist die Selektion der Mitarbeitenden besonders
 wichtig.  Die Beteiligung am Erfolg bedeutet auch, dass Risiken von allen
 Mitarbeitenden getragen werden. Ein Lohn der von Monat zu Monat unterschiedlich
-ist, ist nicht jedermans Sache.
+ist, ist nicht jedermanns Sache.
 
 ## Fazit
 
 Durch die flache Hierarchie und die Beteiligung aller Mitarbeitenden bei
-operativen Entscheiden wird die Zufriedenheiden und die
+operativen Entscheiden wird die Zufriedenheit und die
 Identifikation der Mitarbeitenden mit der Unternehmung erhöht. Von den
 Mitarbeitenden fordert dies die Bereitschaft sich an unternehmerischen
 Entscheiden zu beteiligen. Ausserdem müssen sie sich in einem dynamischen Umfeld
