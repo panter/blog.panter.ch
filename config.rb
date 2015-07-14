@@ -95,3 +95,5 @@ activate :deploy do |deploy|
 
   deploy.flags = '-avz'
 end
+
+activate :livereload
