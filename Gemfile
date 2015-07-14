@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gem "middleman"
 gem "middleman-gh-pages"
 gem "middleman-blog"
+gem "middleman-livereload"
 
 gem 'middleman-favicon-maker'
 gem 'middleman-imageoptim'
