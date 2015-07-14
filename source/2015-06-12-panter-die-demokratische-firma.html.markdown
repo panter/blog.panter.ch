@@ -1,5 +1,5 @@
 ---
-title: Panter die demokratische Firma
+title: Panter, die demokratische Firma
 date: 2015-06-12 08:42 UTC
 tags:
 ---
