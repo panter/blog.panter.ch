@@ -1,10 +1,8 @@
-$header-color: #282828
-$footer-color: #efefef
-$title-color: #282828
-$link-color: #282828
-$text-color: lighten($title-color, 15%)
-$footer-height: 150px
-$font: 'Cardo', serif
+$header-color: #fff
+$text-color: #666
+$title-color: $text-color
+$link-color: #000
+$font: 'Open Sans', sans-serif
 
 =respond-to($media)
   @if $media == md
@@ -22,8 +20,12 @@ html, body
   box-sizing: border-box
   text-rendering: optimizeLegibility
 
-article
+body
+  font-family: $font
   color: $text-color
+
+article
+  margin-bottom: 60px
 
   h1
     color: $title-color
@@ -31,7 +33,9 @@ article
     margin-bottom: 1em
 
     a
-      text-decoration: none
+      &:link, &:active, &:visited
+        text-decoration: none
+        color: $text-color
 
   time
     display: block
@@ -71,33 +75,39 @@ a
     color: $link-color
 
   &:hover
-    color: lighten($link-color, 10%)
+    color: $text-color
 
 .header
-  background: $header-color
-  height: 60px
+  background-color: $header-color
+  box-shadow: 0 1px 2px #eee
+  display: block
+  font-family: $font
+  font-size: 14px
+  height: 70px
+  line-height: 68px
+  position: fixed
+  top: 0
   width: 100%
+  z-index: 1000
 
 .logo
-  background: image-url("panter.svg") no-repeat
-  background-size: 100%
-  width: 100px
-  height: 40px
   display: block
-  top: 15px
-  position: relative
+  top: 5px
+  left: 10px
+  position: absolute
+
+  img
+    width: 200px
 
 .page-wrapper
   min-height: 100%
-  margin-bottom: -$footer-height
 
   &:after
     content: ""
     display: block
-    height: $footer-height
 
 .container
-  max-width: 700px
+  max-width: 800px
   position: relative
 
   +respond-to(lg)
@@ -105,29 +115,16 @@ a
 
 .article-list,
 .article-detail
-  margin: 50px 20px
+  margin: 10px 20px
 
   +respond-to(lg)
     margin:
-      top: 50px
-      bottom: 50px
+      top: 100px
+      bottom: 20px
       left: auto
       right: auto
-
-.footer
-  height: $footer-height
-  background: $footer-color
-  padding: 20px
 
 .back, .more
   text-decoration: none
   transition: transform 0.3s
-  transform: translateX(0)
   display: block
-
-  &:hover
-    transform: translateX(-10px)
-
-.more
-  &:hover
-    transform: translateX(10px)

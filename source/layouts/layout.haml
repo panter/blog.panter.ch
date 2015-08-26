@@ -6,7 +6,7 @@
     %meta{ name: "viewport", content: "width=device-width, initial-scale=1" }
     :javascript
       WebFontConfig = {
-        google: { families: [ 'Cardo::latin' ] }
+        google: { families: [ 'Open Sans:400,600' ] }
       };
       (function() {
         var wf = document.createElement('script');
@@ -25,9 +25,6 @@
     %body{ class: page_classes }
       .page-wrapper
         %header.header
-          .container
-            %a.logo{ href: '/' }
+          %a.logo{ href: '/' }
+            = image_tag 'logo_invert.png'
         = yield
-
-      %footer.footer
-        .container
