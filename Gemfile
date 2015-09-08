@@ -8,6 +8,8 @@ gem "middleman-livereload"
 
 gem 'middleman-favicon-maker'
 gem 'middleman-imageoptim'
+gem "middleman-syntax"
+
 gem 'image_optim_pack'
 gem 'middleman-deploy'
 
