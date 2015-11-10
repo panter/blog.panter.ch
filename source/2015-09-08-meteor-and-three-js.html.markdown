@@ -4,17 +4,15 @@ date: 2015-09-08 21:30
 tags:
 ---
 
-We at PANTER already combined Meteor with a 2d-canvas-libraries ([Konva / Kinetic.js](https://github.com/konvajs/konva)), so 3d-rendering is the next logical step.
-
-## Introduction
+We at Panter already combined Meteor with a 2D canvas libraries ([Konva / Kinetic.js](https://github.com/konvajs/konva)), so 3D rendering is the next logical step.
 
 Meteor is a "fullstack" webframework, covering both client and server. If you haven't heard about it, check it out at [meteor.com](https://www.meteor.com/).
 
-Meteor update its views as soon as the underlying data changes in a reactive way. The default rendering engine *Blaze* and the template-language "spacebars" provide an easy way to work with html (btw. official *react*-support coming soon), but what if we want to use other renderers such as THREE.js and update a 3D-View in a reactive way?
+Meteor updates its views as soon as the underlying data changes in a reactive way. The default rendering engine *Blaze* and the template language "spacebars" provide an easy way to work with html, but what if we want to use other renderers such as THREE.js and update a 3D view in a reactive way?
 
 ## Preparations
 
-I use the meteor-smartpackage 'limemakers:three' in this example, but you can add the THREE.js-files also manually.
+In this example the meteor-smartpackage 'limemakers:three', but you can add the THREE.js-files also manually.
 
 ## Set the scene
 
@@ -55,7 +53,7 @@ Template.THREE_scene.onRendered ->
 
 ## Setup the camera
 
-Let's add a camera and make it rotateable with the mouse and let there be light:
+Let's add a camera and make it rotatable with the mouse and let there be light:
 
 ~~~
 
@@ -80,15 +78,15 @@ Template.THREE_scene.onRendered ->
 
 ~~~
 
-## start the rendering loop
+## Start the rendering loop
 
 While the template is rendered, we can use *requestAnimationFrame* to re-render the scene. If we change any objects added to the scene, THREE.js will update all these objects.
 
-Notabene: we are still in the *Template.THREE_scene.onRendered*-callback. We can check if this template has been destroyed, by checking the *isDestroyed*-property on the underlying Blaze-view (ES2015-users may use the *fat-arrow*-function here, js-users keep a reference to the template with self=this).
+NB: we are still in the `Template.THREE_scene.onRendered`-callback. We can check if this template has been destroyed, by checking the `isDestroyed`-property on the underlying Blaze-view.
 
 ~~~
 
-## start render-loop
+## Start render-loop
 
 Template.THREE_scene.onRendered ->
 
@@ -106,9 +104,9 @@ Template.THREE_scene.onRendered ->
 
 ## Enter *cursor.observe*
 
-Meteor's *cursor.observe* and *cursor.observeChanges* enables to observe a Mongo-Collection on added, changed or removed documents. This enables us to couple the collection with the *THREE.js*-Scene.
+Meteor's `cursor.observe` and `cursor.observeChanges` allows to observe a Meteor collection on added, changed or removed documents. This allows us to couple the collection with the *THREE.js*-Scene.
 
-To map document-id's to THREE.js-Objects, we create a simple object that holds all references to THREE.js objects placed to the view (There are other approaches for this like find elements on the scene by name).
+To map document-id's to THREE.js-Objects, we create a simple object that holds all references to THREE.js objects placed to the view (There are other approaches for this like finding elements on the scene by name).
 
 The general pattern for this looks like this:
 
@@ -144,7 +142,7 @@ Template.THREE_scene.onRendered ->
 
 ### In detail: the *added*-callback
 
-We create simple cubes in this example, but you could also call a constructor dynamically. E.g. you could add a *type*-property to every document and call a matching constructor.
+We create simple cube in this example, but you could also call a constructor dynamically. E.g. you could add a *type*-property to every document and call a matching constructor.
 
 After creation we add the object to the scene and store a reference to this object. We also receive a *fields*-parameter in this callback which holds all properties of the document. We can simply copy these properties onto the THREE-js object with *deepSet*, so that it reflects the state on the database. The function *deepSet* is explained below.
 
@@ -173,9 +171,9 @@ deepSet = (obj, properties) ->
 
 ~~~
 
-### In detail: the *change*-callback
+### In detail: the *changed*-callback
 
-The changed-callback will notify us on documents that have been changed in the database. We simply copy the changed properties onto the THREE.js-object (again with *deepSet*).
+The `changed`-callback will notify us about documents that have been changed in the database. We simply copy the changed properties onto the THREE.js-object (again with `deepSet`).
 
 ~~~
 
@@ -187,7 +185,7 @@ The changed-callback will notify us on documents that have been changed in the d
 
 ### Tidy up
 
-Noticed the *observeHandle*-variable returned from *cursor.observeChanges*? We use this to stop the observation once the template has been destroyed:
+`cursor.observeChanges` returns a handle that we have stored in the `observeHandle` variable. We use this to stop the observation once the template has been destroyed:
 
 ~~~
 
@@ -196,18 +194,17 @@ Template.THREE_scene.onRendered ->
   (...)
 
   @view.onViewDestroyed ->
-    console.log "stop"
     observeHandle?.stop()
 
 ~~~
 
 ## Play with it
 
-The THREE_scene-template now reflects every object in the Players-Collection. Start the app, open the console and type:
+The THREE_scene-template now reflects every object in the Players-collection. Start the app, open the console and type:
 
 `Collections.Players.insert({})`
 
-This will insert a white cube to the scene. We can now move this cube around:
+This will insert a white cube into the scene. We can now move this cube around:
 
 `Collections.Players.update("wJ4XAkA4MCCk9A3oy", {$set:{position:{x:-2,y:2, z:0.5}}})`
 
@@ -219,9 +216,11 @@ We can even change the color of the cube:
 
 `Collections.Players.update("wJ4XAkA4MCCk9A3oy", {$set:{material:{color:{r:0.8,g:0.2, b:0.3}}}})`
 
-If you open another browser window, you will see that this changes are reflected immediatly on all clients. But since you know meteor, that's what you'd expected, isn't it?
+If you open another browser window, you will see that these changes are reflected immediately on all clients. But since you know meteor, that's what you'd expect, isn't it?
 
-Source-code available: [github.com/panter/meteor-threejs-demo](https://github.com/panter/meteor-threejs-demo)
+
+
+Source-code: [github.com/panter/meteor-threejs-demo](https://github.com/panter/meteor-threejs-demo)
 
 Demo: [panter-threejs-demo.meteor.com](http://panter-threejs-demo.meteor.com/)
 
