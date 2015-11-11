@@ -1,6 +1,6 @@
 ---
 title: Meteor and THREE.js
-date: 2015-09-08 21:30
+date: 2015-11-10 21:30
 tags:
 ---
 
@@ -217,7 +217,6 @@ We can even change the color of the cube:
 `Collections.Players.update("wJ4XAkA4MCCk9A3oy", {$set:{material:{color:{r:0.8,g:0.2, b:0.3}}}})`
 
 If you open another browser window, you will see that these changes are reflected immediately on all clients. But since you know meteor, that's what you'd expect, isn't it?
-
 
 
 Source-code: [github.com/panter/meteor-threejs-demo](https://github.com/panter/meteor-threejs-demo)
