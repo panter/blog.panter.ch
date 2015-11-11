@@ -8,7 +8,7 @@ We at Panter already combined Meteor with a 2D canvas libraries ([Konva / Kineti
 
 Meteor is a "fullstack" webframework, covering both client and server. If you haven't heard about it, check it out at [meteor.com](https://www.meteor.com/).
 
-Meteor updates its views as soon as the underlying data changes in a reactive way. The default rendering engine *Blaze* and the template language "spacebars" provide an easy way to work with html, but what if we want to use other renderers such as THREE.js and update a 3D view in a reactive way?
+Meteor updates its views as soon as the underlying data changes in a reactive way. The default rendering engine *Blaze* and the template language *spacebars* provide an easy way to work with html, but what if we want to use other renderers such as THREE.js and update a 3D view in a reactive way?
 
 ## Preparations
 
@@ -80,7 +80,7 @@ Template.THREE_scene.onRendered ->
 
 ## Start the rendering loop
 
-While the template is rendered, we can use *requestAnimationFrame* to re-render the scene. If we change any objects added to the scene, THREE.js will update all these objects.
+While the template is rendered, we can use `requestAnimationFrame` to re-render the scene. If we change any objects added to the scene, THREE.js will update all these objects.
 
 NB: we are still in the `Template.THREE_scene.onRendered`-callback. We can check if this template has been destroyed, by checking the `isDestroyed`-property on the underlying Blaze-view.
 
@@ -102,7 +102,7 @@ Template.THREE_scene.onRendered ->
 
 ~~~
 
-## Enter *cursor.observe*
+## Enter `cursor.observe`
 
 Meteor's `cursor.observe` and `cursor.observeChanges` allows to observe a Meteor collection on added, changed or removed documents. This allows us to couple the collection with the *THREE.js*-Scene.
 
@@ -140,11 +140,11 @@ Template.THREE_scene.onRendered ->
 
 ~~~
 
-### In detail: the *added*-callback
+### In detail: the `added`-callback
 
-We create simple cube in this example, but you could also call a constructor dynamically. E.g. you could add a *type*-property to every document and call a matching constructor.
+We create simple cube in this example, but you could also call a constructor dynamically. E.g. you could add a `type`-property to every document and call a matching constructor.
 
-After creation we add the object to the scene and store a reference to this object. We also receive a *fields*-parameter in this callback which holds all properties of the document. We can simply copy these properties onto the THREE-js object with *deepSet*, so that it reflects the state on the database. The function *deepSet* is explained below.
+After creation we add the object to the scene and store a reference to this object. We also receive a `fields`-parameter in this callback which holds all properties of the document. We can simply copy these properties onto the THREE-js object with `deepSet`, so that it reflects the state on the database. The function `deepSet` is explained below.
 
 ~~~
 
@@ -171,7 +171,7 @@ deepSet = (obj, properties) ->
 
 ~~~
 
-### In detail: the *changed*-callback
+### In detail: the `changed-callback
 
 The `changed`-callback will notify us about documents that have been changed in the database. We simply copy the changed properties onto the THREE.js-object (again with `deepSet`).
 
