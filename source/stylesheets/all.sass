@@ -1,8 +1,10 @@
 $header-color: #fff
 $text-color: #666
 $title-color: $text-color
+$subtitle-color: lighten($text-color, 20%)
 $link-color: #000
 $font: 'Open Sans', sans-serif
+$author-avatar-size: 40px
 
 =respond-to($media)
   @if $media == md
@@ -13,6 +15,12 @@ $font: 'Open Sans', sans-serif
     @media (min-width: 960px)
       @content
 
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+respond-to
 html, body
   height: 100%
 
@@ -39,7 +47,7 @@ article
 
   time
     display: block
-    color: lighten($text-color, 20%)
+    color: $subtitle-color
     font-size: 16px
     margin-top: 0.5em
 
@@ -128,3 +136,16 @@ a
   text-decoration: none
   transition: transform 0.3s
   display: block
+
+.author-avatar
+  display: inline-block
+  vertical-align: middle
+  +border-radius($author-avatar-size)
+  height: $author-avatar-size
+  width: $author-avatar-size
+
+.author-name
+  display: inline-block
+  vertical-align: middle
+  height: $author-avatar-size
+  line-height: $author-avatar-size

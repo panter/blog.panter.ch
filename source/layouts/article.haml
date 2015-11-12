@@ -5,6 +5,13 @@
         = current_article.title
         %time
           = current_article.date.strftime('%b %e %Y')
+
+      .author
+        = image_tag("#{author_image_path(current_article.data.author)}", class: 'author-avatar')
+        %span.author-name
+          = current_article.data.author
+
       = yield
+
       %p
         = link_to '&laquo; Zurück zur Übersicht', '/', class: 'back'
