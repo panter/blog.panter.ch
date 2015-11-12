@@ -1,6 +1,7 @@
 ---
 title: Das Colab Zürich - Abschluss und Rückblick
 date: 2015-08-24 14:11 UTC
+author: lex
 tags:
 ---
 

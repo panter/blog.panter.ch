@@ -1,6 +1,7 @@
 ---
 title: Idempotent seeds in rails
 date: 2015-08-05 21:11 UTC
+author: lex
 tags:
 ---
 
