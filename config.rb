@@ -41,23 +41,11 @@
 # end
 
 # Methods defined in the helpers block are available in templates
-helpers do
-  def author_image_path(author_name)
-    name_part = author_name
-      .gsub(/[äöüÄÖÜ]/, {
-        'ä' => 'ae',
-        'ö' => 'oe',
-        'ü' => 'ue',
-        'Ä' => 'Ae',
-        'Ö' => 'Oe',
-        'Ü' => 'Ue',
-      })
-      .parameterize
-
-      "authors/#{name_part}.jpg"
-  end
-end
-
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
 activate :blog do |blog|
   blog.layout = "article"
   blog.paginate = true

@@ -7,9 +7,9 @@
           = current_article.date.strftime('%b %e %Y')
 
       .author
-        = image_tag("#{author_image_path(current_article.data.author)}", class: 'author-avatar')
+        = image_tag("authors/#{current_article.data.author}.jpg", class: 'author-avatar')
         %span.author-name
-          = current_article.data.author
+          = data.authors[current_article.data.author]['name']
 
       = yield
 
