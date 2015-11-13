@@ -3,6 +3,7 @@ $text-color: #666
 $title-color: $text-color
 $subtitle-color: lighten($text-color, 20%)
 $link-color: #000
+$navigation-color: #4d4d4d
 $font: 'Open Sans', sans-serif
 $author-avatar-size: 40px
 
@@ -107,6 +108,21 @@ a
   img
     width: 200px
 
+nav
+  margin: auto
+  position: relative
+  max-width: 800px
+  display: none
+
+  +respond-to(lg)
+    display: block
+
+  a:link,
+  a:active,
+  a:visited
+    color: $navigation-color
+    text-decoration: none
+
 .page-wrapper
   min-height: 100%
 
@@ -117,20 +133,10 @@ a
 .container
   max-width: 800px
   position: relative
+  margin: 90px 10px 20px 10px
 
-  +respond-to(lg)
-    margin: 0 auto
-
-.article-list,
-.article-detail
-  margin: 10px 20px
-
-  +respond-to(lg)
-    margin:
-      top: 100px
-      bottom: 20px
-      left: auto
-      right: auto
+  +respond-to(md)
+    margin: 100px auto 20px auto
 
 .back, .more
   text-decoration: none
