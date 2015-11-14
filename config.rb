@@ -59,7 +59,7 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
@@ -78,6 +78,8 @@ configure :build do
   end
 
   activate :imageoptim, :pngout => false, :svgo => false
+
+  activate :gzip
 end
 
 activate :deploy do |deploy|
