@@ -22,11 +22,11 @@
     %title
       = current_page.data.title || "Panter Blog"
 
-    %body{ class: page_classes }
-      .page-wrapper
-        %header.header
-          %a.logo{ href: '/' }
-            = image_tag 'logo_invert.png'
-          %nav
-            %a{ href: '/' } BLOG
-        = yield
+  %body{ class: page_classes }
+    .page-wrapper
+      %header.header
+        %a.logo{ href: '/' }
+          = image_tag 'logo_invert.png'
+        %nav
+          %a{ href: '/' } BLOG
+      = yield
