@@ -35,11 +35,6 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
-
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
@@ -96,4 +91,6 @@ activate :deploy do |deploy|
   deploy.flags = '-avz'
 end
 
-activate :livereload
+configure :development do
+  activate :livereload
+end
