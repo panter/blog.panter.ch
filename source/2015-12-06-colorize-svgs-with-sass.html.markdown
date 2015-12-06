@@ -1,8 +1,8 @@
 ---
 title: Colorize SVGs with SASS
-date: 2015-11-27 16:05 UTC
+date: 2015-12-06 10:05 UTC
 author: bro
-tags: 
+tags:
 ---
 
 As you might know it is possible to style an SVG image via CSS if you
@@ -34,7 +34,7 @@ browsers support it](http://caniuse.com/#feat=css-masks).
 
 Alternatively, if you use SASS in your Rails application already, you can write your own
 SASS function to inline the SVG. As an example you can change the color of all strokes (script
-[inspired by this Compass issue] (https://github.com/Compass/compass/issues/1460#issuecomment-65132746)
+[inspired by this Compass issue] (https://github.com/Compass/compass/issues/1460#issuecomment-65132746))
 :
 
 ```ruby
@@ -51,7 +51,7 @@ module Sass::Script::Functions
     svg = File.read(asset.pathname)
 
     change_color!(svg, color)
-    
+
     encoded_svg = CGI::escape(svg).gsub('+', '%20')
     svg_data = "url('data:image/svg+xml;charset=utf-8," + encoded_svg + "')"
     Sass::Script::String.new(svg_data)
@@ -65,14 +65,18 @@ module Sass::Script::Functions
 end
 ```
 
-You have to load that code when your application starts, for example in an
-[initializer](https://github.com/exul/colorize-svg/blob/master/config/initializers/sass.rb).
+You have to load that code when your application starts, for example [by requiring it
+in you application.rb](https://github.com/panter/colorize-svg/blob/master/config/application.rb#L2):
+
+```ruby
+require File.expand_path('lib/sass.rb')
+```
 
 Now you can use the function in your SASS file:
 
 ```sass
 colorize-svg-strokes('circle.svg', #00FF00)
-``` 
+```
 
 Instead of just replacing the color of the stroke you could have placeholders like
 `_colorize_` in your SVG and replace them with the given color. But you have to be
@@ -80,4 +84,4 @@ careful, because this makes your SVG unusable without the replaced placeholder.
 
 Here's a small Rails application that implements both functions, one to only change
 the color of the stroke and the other to replace the placeholder:
-[https://github.com/exul/colorize-svg](https://github.com/exul/colorize-svg)
+[https://github.com/panter/colorize-svg](https://github.com/panter/colorize-svg)
