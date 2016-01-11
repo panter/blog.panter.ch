@@ -12,5 +12,11 @@ published: false
           = article.title
           %time
             = article.date.strftime('%b %e %Y')
+
+      .author
+        = image_tag("authors/#{article.data.author}.jpg", class: 'author-avatar')
+        %span.author-name
+          = data.authors[article.data.author]['name']
+
       = article.summary
       = link_to '&raquo; Mehr lesen', article.url, class: 'more'
