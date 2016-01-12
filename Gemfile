@@ -14,3 +14,4 @@ gem 'middleman-deploy'
 
 gem "nokogiri"
 gem "redcarpet"
+gem "builder"
