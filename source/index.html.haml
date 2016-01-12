@@ -16,7 +16,7 @@ published: false
       .author
         = image_tag("authors/#{article.data.author}.jpg", class: 'author-avatar')
         %span.author-name
-          = data.authors[article.data.author]['name']
+          = article_author(article)
 
       = article.summary
       = link_to '&raquo; Mehr lesen', article.url, class: 'more'

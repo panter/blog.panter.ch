@@ -35,12 +35,6 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 activate :blog do |blog|
   blog.layout = "article"
   blog.paginate = true
@@ -102,4 +96,11 @@ end
 
 configure :development do
   activate :livereload
+end
+
+# Methods defined in the helpers block are available in templates
+helpers do
+  def article_author(article)
+    data.authors[article.data.author]['name']
+  end
 end

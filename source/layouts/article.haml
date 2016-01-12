@@ -9,7 +9,7 @@
       .author
         = image_tag("authors/#{current_article.data.author}.jpg", class: 'author-avatar')
         %span.author-name
-          = data.authors[current_article.data.author]['name']
+          = article_author(current_article)
 
       = yield
 
