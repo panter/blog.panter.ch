@@ -51,7 +51,7 @@ Einen Prototyp der App mit Ionic fürs neue Impacthub findet man hier:
 HubApp: https://github.com/panter/hubapp-ionic
 
 Zudem wurden nicht technologische Themen abgehandelt wie:
-- Opacity Zero talk: https://github.com/panter/talk-opacity-zero
+- Opacity Zero talk: http://panter.github.io/talk-opacity-zero
 - Panter Blog: https://github.com/panter/blog.panter.ch
 - Ruby on Rails Switzerland design: http://stage.rubyonrails.ch
 
