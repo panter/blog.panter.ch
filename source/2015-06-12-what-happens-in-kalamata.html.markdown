@@ -1,9 +1,9 @@
 ---
-title: What happens in Kalamata
+title: Panter im Klassenlager 2015
 date: 2015-06-12 12:47 UTC
 tags:
 ---
-Panter im Klassenalger 2015
+Panter im Klassenlager 2015
 
 Jedes Jahr gibt es für die panter Mitarbeiter die Möglichkeit nach Griechenland
 ins Klassenlager zu fahren.
@@ -14,9 +14,8 @@ fahren ist vielleicht am Anfang noch ein Rätsel. Die Kommentare von anderen
 Mitarbeitern wie „cool“ das sei, lässt allerdings nicht viel Zweifel aufkommen,
 dass man die Gelegenheit nicht missen sollte.
 
-Ende Mai, war’s dann endlich soweit, mein erstes Mal – Klassenlager
-natürlich. Schon der Check-in am Flughafen begann voller Vorfreude. Die
-Security Control hatte uns oder wohl eher unsere ganze mitgeschleppte
+Ende Mai wars dann endlich soweit: mein erstes Klassenlager!. Schon der Check-in am Flughafen begann voller Vorfreude.
+Die Security Control hatte uns oder wohl eher unsere ganze mitgeschleppte
 Technologie ebenfalls besonders gern, sodass gewisse Taschen gleich viermal
 durch den Scanner durften. Dass verhiess ja schon mal viel Gutes. Das erste
 Gebot stand bereits in der Informationsmail – es durfte an keinen alltäglichen
@@ -48,7 +47,6 @@ einzigartig. Allerdings möchte ich nicht vorenthalten, was während dieser Woch
 Ebenfalls wurde ein Rubygem entwickelt:
 Rails Deploy gem: https://github.com/panter/panter-rails-deploy
 
-<!-- FIXME This repo is private at the moment - so delete this part or make repo public-->
 Einen Prototyp der App mit Ionic fürs neue Impacthub findet man hier:
 HubApp: https://github.com/panter/hubapp-ionic
 
@@ -59,4 +57,4 @@ Zudem wurden nicht technologische Themen abgehandelt wie:
 
 Wie man sieht, entstanden in dieser Woche "Ferien" viele spannende Projekte. Gewisse werden sicher im Alltag fortbestehen.
 
-Ich freu mich bereits jetzt aufs nächste Klassenlager bis dann heisst es wieder fleissig an Alltagsprojekten weiter coden.
+Ich freu mich bereits jetzt aufs nächste Klassenlager, bis dann heisst es wieder fleissig an Alltagsprojekten weiter coden.
