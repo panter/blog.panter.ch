@@ -6,7 +6,7 @@ tags:
 ---
 
 Git is one of the greatest developer tools available. But using Git in a wrong
-way can lead to a miserable life. The following 5 rules might help to preserving
+way can lead to a miserable life. The following 5 rules might help to preserve
 your developer happiness.
 
 1. **Make commits as small as possible**
