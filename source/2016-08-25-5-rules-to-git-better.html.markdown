@@ -6,7 +6,7 @@ tags:
 ---
 
 Git is one of the greatest developer tools available. But using Git in a wrong
-way can lead to a miserable life. The following 5 rules might help preserving
+way can lead to a miserable life. The following 5 rules might help to preserving
 your developer happiness.
 
 1. **Make commits as small as possible**
@@ -23,7 +23,7 @@ And now let's get into some more detail.
 
 ## 1. Make commits as small as possible
 
-A commit can't be too small, it can only be too big. This is the same rule that
+A commit can't be too small; it can only be too big. This is the same rule that
 applies to programming in general, where a class or a method should be kept
 small. Whenever creating a commit, think about the [Single Responsibility
 Principle (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle)
@@ -42,7 +42,7 @@ following:
 * Use the present tense
 * Describe what you did
 * Describe why you did it if it's not obvious. Many times you or some other
-  developer will look at code where its purpose is not obvious. In this case
+  developer will look at the code where its purpose is not obvious. In this case
   having the possibility to `git blame` and read a meaningful description of
   the change is very helpful.
 
@@ -54,14 +54,14 @@ following:
   working on the command line are better off with text which is not too wide.
 * Keep the second line empty
 * Use the rest of the commit message to describe the commit. There's no
-  restriction to the format and the length, so be as descriptive and
+  restriction on the format nor the length, so be as descriptive and
   informative as possible.
 
 This is what the [man page](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html)
 of the `git commit` command says:
 
 > Though not required, it’s a good idea to begin the commit message with a
-> single short (less than 50 character) line summarizing the change, followed
+> single short (less than 50 characters) line summarizing the change, followed
 > by a blank line and then a more thorough description.
 
 
@@ -78,33 +78,33 @@ Rebase. Always. Frequently.
 Avoid merging whenever possible. Merge commits are usually meaningless and just
 clutter the Git history. Only introduce merge commits when they actually do
 something useful, as e.g. when merging a pull request or a feature branch. In
-this case they make the history more readable by providing a point where a
+this case, they make the history more readable by providing a point where a
 certain feature was introduced. Also, they facilitate reverting a whole merge.
 
 Merge commits such as "Merge branch 'master' into [...]" are totally worthless
 and just show that the developer was too lazy to rebase. Whenever you're
 syncing a branch with another one, always rebase. Also for `git pull` you
-should set your config to use rebase instead of merge.
+should set your config to 'use rebase' instead of merge.
 
-(Often, having to resolve the merge conflicts on a specific commit makes it
+(Often, having to resolve the merge conflicts on a particular commit makes it
 easier to reason about the conflict.)
 
 But, there are also situations when rebasing should not be used. Don't rebase
-published changes. You should never rebase commits that someone else might have
+published modify. You should never rebase commits that someone else might have
 already consumed. You should never change the history of origin/master. For
-feature branches which are work in progress it's totally fine to rebase, as
+feature branches which are work in progress, it's totally fine to rebase, as
 long as you work alone on the branch or your team is aware of the fact that you
-rebase. As soon as they land in master the commits must not be changed anymore.
+rebase. As soon as they land in master, the commits must not be changed anymore.
 
 
 ## 4. Don't squash everything
 
 If you adhere to rule 1, every commit is meaningful and documents your work.
-Squashing removes of a lot of valuable information about the history and all
-the changes of the codebase.
+Squashing removes a lot of valuable information about the history and all
+the changes in the codebase.
 
 Squashing is useful when you have commits that semantically belong together, or
-if you have commits that amend other commits. So sqashing (or interactive
+if you have commits that amend other commits. So squashing (or interactive
 rebasing) is useful whenever a commit is not meaningful on its own.
 
 
