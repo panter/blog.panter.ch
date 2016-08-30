@@ -42,7 +42,7 @@ following:
 * Use the present tense
 * Describe what you did
 * Describe why you did it if it's not obvious. Many times you or some other
-  developer will look at the code where its purpose is not obvious. In this case
+  developer will look at code where its purpose is not obvious. In this case
   having the possibility to `git blame` and read a meaningful description of
   the change is very helpful.
 
@@ -90,7 +90,7 @@ should set your config to 'use rebase' instead of merge.
 easier to reason about the conflict.)
 
 But, there are also situations when rebasing should not be used. Don't rebase
-published modify. You should never rebase commits that someone else might have
+published changes. You should never rebase commits that someone else might have
 already consumed. You should never change the history of origin/master. For
 feature branches which are work in progress, it's totally fine to rebase, as
 long as you work alone on the branch or your team is aware of the fact that you
@@ -100,8 +100,8 @@ rebase. As soon as they land in master, the commits must not be changed anymore.
 ## 4. Don't squash everything
 
 If you adhere to rule 1, every commit is meaningful and documents your work.
-Squashing removes a lot of valuable information about the history and all
-the changes in the codebase.
+Squashing removes a lot of valuable information about the history and all the
+changes done to the codebase.
 
 Squashing is useful when you have commits that semantically belong together, or
 if you have commits that amend other commits. So squashing (or interactive
