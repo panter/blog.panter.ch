@@ -88,9 +88,6 @@ and just show that the developer was too lazy to rebase. Whenever you're
 syncing a branch with another one, always rebase. Also for `git pull` you
 should set your config to 'use rebase' instead of merge.
 
-(Often, having to resolve the merge conflicts on a particular commit makes it
-easier to reason about the conflict.)
-
 But, there are also situations when rebasing should not be used. Don't rebase
 published changes. You should never rebase commits that someone else might have
 already consumed. You should never change the history of origin/master. For
