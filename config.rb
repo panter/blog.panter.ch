@@ -85,7 +85,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :rsync
-  deploy.host = 'panter.ch'
+  deploy.host = 'blog.panter.ch'
   deploy.user = 'panterch'
   deploy.clean = true
 
