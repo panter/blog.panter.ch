@@ -1,6 +1,6 @@
 ---
 title: What are Factories and how do they stimulate the lean approach to create products & services?
-date: 2017-01-18 13:37 UTC
+date: 2017-01-17 13:37 UTC
 author: psc
 tags:
 ---
