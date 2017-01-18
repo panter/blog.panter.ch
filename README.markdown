@@ -21,7 +21,7 @@ bundle exec middleman server
 ```
 
 ## Build and publish
-The credentials are in `pass`.
+Your key needs to be added to the Server by an Admin.
 
 ```
 bundle exec middleman build  # Compile all files into the build directory
