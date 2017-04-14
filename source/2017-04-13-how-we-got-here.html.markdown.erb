@@ -1,0 +1,108 @@
+# How we got here
+As a Sysadmin at Panter you're also responsible for the Infrastructure of Impact
+Hub Zürich a vibrant coworkingspace in the heart of zürich. On 3 floors and a total
+of x squaremeters we're making sure that all the members fit into our WiFi network,
+as always in such a crowded place there's not much margin for errors.
+And because our Frequencies are almost as crowded with rogue WiFis like the
+deathstar's having holes for thermonuclear missiles, this can be quite challenging
+and sometimes quite frustrating.
+
+[![Youtube:Steve Jobs 500 WiFi Basestations](http://img.youtube.com/vi/zNlBLyf39Bk/1.jpg)](http://www.youtube.com/watch?v=zNlBLyf39Bk "Steve Jobs WiFi")
+
+In this Blogpost we'd like to give you a little bit of insight into our Configuration
+and how we're troubleshooting our Network. Our WiFi runs exclusively on Mikrotik
+devices because this gives us alot of flexibility, their devices come at a fair
+price and we're not forced to pay fees to use their products.
+When we first got here we had nothing but an empty Rack, an old DIY Router and
+some broken cables, step by step we've built up the infrastructure adjusting it to our needs.
+## The dawn of WiFi
+
+![Shabby AP][ShappyAP.jpg]
+
+We started with an Emergencysetup (2 Accesspoints) because we had to move in
+faster than expected there was not much of a concept but it worked for us Panters
+which where pretty much alone at that time. While we where literally working on a
+construction site which was quite dusty at the time, we even managed to nearly
+kill our Router because he suffocated in the dust (the whole rack was accidentaly
+covered in dust) but it was nothing a little bit of compressed air couldn't solve.
+With the help of our Networkcrack (koa) we've got a solid setup and started to
+use Mikrotiks Capsman, which is a bit of a pain to get into but it works like a
+charm after the initial Setup and little bit of a hassle to wrap your head around it.
+## Perception
+There's always a gap between sysadmins and users when it comes to quality, we're
+pretty much the only fans of cabled connection and we love the convenience of cables
+and becuase we had alot of LAN Ports in this building where a school was located
+back in the day, we had this sweet vision of small AP & Switch combos on every
+table so people who preferred WiFi could get it from the ether and the other
+half could use cables as they desire, but well, that idea got chased out of town pretty fast.
+
+So we decided to go for 5ghz only, because it's way faster than 2.4g and it allows
+you to put up a higher density of AP's and if less people use one accesspoint
+everyone will have a faster connection, and since we where living in the year 2015
+there shouldn't be an issue with dropping 2.4g, totally wrong.
+
+![ClientBandDistribution][ClientBandDistribution.jpg]
+
+As it turns out even devices supporting 5ghz aren't performing overly well on it
+and hollow glassbricks are appearantly the death of every 5g connection, there are
+also quite some difference between mikrotiks different products, here's a list of a
+few of which we went through.
+
+### Legacy AP's
+* [netmetal](https://routerboard.com/RB922UAGS-5HPacT-NM) - Alot of DIY, so it's time consuming and thus not quite cheap, but nearly indestructible
+* [Netbox](https://routerboard.com/RB911G-5HPacD-NB) - Also a bit DIY, pretty huge and not quite cheap, also they're not the most aesthetic ones
+* [cAP2n](https://routerboard.com/RBcAP2nD) - Plastic toy, wouldn't recommend
+
+### Current AP's
+* [wAP](https://routerboard.com/RBwAPG-5HacT2HnD) - Aesthetic pretty good dualband accesspoints with a good range
+* [SXT SA5 ac](https://routerboard.com/RBSXTG-5HPacD-SA) - With an angle of 90° perfect for the corners in our CoWorking Space
+
+We where also pretty harsh when it comes down to kicking people out of our Accesspoints,
+because if you got a bad connection you're giving a bad time to all the other people
+using that accesspoints. When we lowered the connectivity thereshold to our sweetspot
+of 65dBm we had an awesome connection but somehow all the other users where having a
+bad time, this is the point you have to realize that you obviously have another perception
+of "things going well" (although you're right). At the moment we're having 20 AP's
+on 3 Floors, serving over 300 clients during peak hours.
+
+
+![ClientsPerAP][ClientsPerAP.jpg]
+
+With all those different devices and total freedom for our coworkers there are
+always some people having connectivity issues nonetheless, so the bigger we get
+the more important is that we know how to Monitor our Network and how to
+distribute the load that's hammering on our infrastructure.
+
+
+![TrafficPerAP][TrafficPerAP.jpg]
+
+## Monitoring
+It's also quite important to monitor your Radiowaves, so you can start investigating
+rising issues before alot of people are affected by it and to troubleshoot specific clients issues.
+Having some Schools and offices around us, we're sometimes experiecing a peak in
+Traffic everytime there's a bunch of Schoolboys in front of the Office watching
+Youtube and what not over our Free WiFi. Because that free WiFi is actually intended
+for the Visitors of the Co-Working Space it's important to drop Clients that are
+too far away (across the street inside the Schoolbuilding), that's why we're
+constantly monitoring our Frequencies and repositioning our AP's in order to supply
+our guests with a good connection.
+
+![SignalStats][SignalStats.jpg]
+
+We're also periodically mapping out our space to check for coverage issues,
+noise sources, interferences and overlapping channels.
+
+![SignalLevel][SignalLevel.jpg]
+
+We went on to develop our own Selfservice Portal on which you can send us a
+rating to our company chat as well as chasing the issue yourself.
+We've opensourced it and you can use it however you like and tinker with it,
+it should work on all CapsMan enabled Mikrotik Networks.
+
+![Shazaam][Shazaam.jpg]
+
+We've gone so far to even supply our guest with an Intranet Dashboard in which
+you can check your WiFi Performance using Prometheus to save the timeseries and
+Grafana to visualize them.
+
+![Dashboard][DashboardWifi.jpg]
