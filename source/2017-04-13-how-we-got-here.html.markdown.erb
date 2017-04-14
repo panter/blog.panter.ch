@@ -1,3 +1,10 @@
+---
+title: Monitoring and Stuff
+date: 2017-04-13 15:08 UTC
+author: stb
+tags:
+---
+
 # How we got here
 As a Sysadmin at Panter you're also responsible for the Infrastructure of Impact
 Hub Zürich a vibrant coworkingspace in the heart of zürich. On 3 floors and a total
@@ -17,7 +24,7 @@ When we first got here we had nothing but an empty Rack, an old DIY Router and
 some broken cables, step by step we've built up the infrastructure adjusting it to our needs.
 ## The dawn of WiFi
 
-![Shabby AP][ShappyAP.jpg]
+![Shabby AP](ShabbyAP.jpg)
 
 We started with an Emergencysetup (2 Accesspoints) because we had to move in
 faster than expected there was not much of a concept but it worked for us Panters
@@ -41,7 +48,7 @@ you to put up a higher density of AP's and if less people use one accesspoint
 everyone will have a faster connection, and since we where living in the year 2015
 there shouldn't be an issue with dropping 2.4g, totally wrong.
 
-![ClientBandDistribution][ClientBandDistribution.jpg]
+![ClientBandDistribution](ClientBandDistribution.jpg)
 
 As it turns out even devices supporting 5ghz aren't performing overly well on it
 and hollow glassbricks are appearantly the death of every 5g connection, there are
@@ -66,7 +73,7 @@ of "things going well" (although you're right). At the moment we're having 20 AP
 on 3 Floors, serving over 300 clients during peak hours.
 
 
-![ClientsPerAP][ClientsPerAP.jpg]
+![ClientsPerAP](ClientsPerAP.jpg)
 
 With all those different devices and total freedom for our coworkers there are
 always some people having connectivity issues nonetheless, so the bigger we get
@@ -74,7 +81,7 @@ the more important is that we know how to Monitor our Network and how to
 distribute the load that's hammering on our infrastructure.
 
 
-![TrafficPerAP][TrafficPerAP.jpg]
+![TrafficPerAP](TrafficPerAP.jpg)
 
 ## Monitoring
 It's also quite important to monitor your Radiowaves, so you can start investigating
@@ -87,22 +94,22 @@ too far away (across the street inside the Schoolbuilding), that's why we're
 constantly monitoring our Frequencies and repositioning our AP's in order to supply
 our guests with a good connection.
 
-![SignalStats][SignalStats.jpg]
+![SignalStats](SignalStats.jpg)
 
 We're also periodically mapping out our space to check for coverage issues,
 noise sources, interferences and overlapping channels.
 
-![SignalLevel][SignalLevel.jpg]
+![SignalLevel](SignalLevel.jpg)
 
 We went on to develop our own Selfservice Portal on which you can send us a
 rating to our company chat as well as chasing the issue yourself.
 We've opensourced it and you can use it however you like and tinker with it,
 it should work on all CapsMan enabled Mikrotik Networks.
 
-![Shazaam][Shazaam.jpg]
+![Shazaam](Shazaam.jpg)
 
 We've gone so far to even supply our guest with an Intranet Dashboard in which
 you can check your WiFi Performance using Prometheus to save the timeseries and
 Grafana to visualize them.
 
-![Dashboard][DashboardWifi.jpg]
+![Dashboard](DashboardWifi.jpg)
