@@ -18,7 +18,7 @@
 
       %p{:class => "share"}
         Share on
-        = link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{config[:page_url]}#{current_page.url}"
-        = link_to 'Twitter', "https://twitter.com/intent/tweet?text=#{config[:page_url]}#{current_page.url}"
-        = link_to 'LinkedIn', "https://www.linkedin.com/cws/share?url=#{config[:page_url]}#{current_page.url}"
-        = link_to 'Email', "mailto:aFriend@example.com?&subject=#{config[:page_url]}#{current_page.url}"
+        = link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{get_full_post_url}"
+        = link_to 'Twitter', "https://twitter.com/intent/tweet?text=#{get_full_post_url}"
+        = link_to 'LinkedIn', "https://www.linkedin.com/cws/share?url=#{get_full_post_url}"
+        %a{ href: "mailto:?subject=#{current_article.title}&body=#{get_full_post_url}" } Email

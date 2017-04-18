@@ -41,7 +41,6 @@ activate :blog do |blog|
 end
 
 set :page_url, 'https://blog.panter.ch'
-
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -104,5 +103,9 @@ end
 helpers do
   def article_author(article)
     data.authors[article.data.author]['name']
+  end
+
+  def get_full_post_url
+    File.join(config[:page_url],current_article.url)
   end
 end
