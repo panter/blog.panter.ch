@@ -1,5 +1,5 @@
 ---
-title: Bandwith, Coverage and other kinds of Voodoo
+title: Bandwith, coverage, monitoring and other types of Voodoo
 date: 2017-04-13 13:37 UTC
 author: stb
 tags:
@@ -7,14 +7,14 @@ tags:
 
 As a Sysadmin at Panter you’re also responsible for the Infrastructure of Impact
 Hub Zürich a vibrant coworkingspace in the heart of zürich. On 3 floors and a
-total of around 2000 square meters, we’re making sure that all the members fit into our WiFi
+total of roughly 2000 square meters, we’re making sure that all the members fit into our WiFi
 network, as always in such a crowded place there’s not much margin for errors.
 And because our Frequencies are almost as crowded with rogue WiFis like the death
 star’s having holes for thermonuclear missiles, this can be quite challenging and
 sometimes quite frustrating.
 
-[![Youtube:Steve Jobs 500 WiFi Basestations](http://img.youtube.com/vi/zNlBLyf39Bk/1.jpg)]
-(http://www.youtube.com/watch?v=zNlBLyf39Bk "Steve Jobs WiFi")
+[![Youtube:Steve Jobs 500 WiFi Basestations](jobs.jpg)]
+(https://youtu.be/1-oIL9cLHDc?t=19 "Steve Jobs WiFi")
 
 In this Blog post we'd like to give you a little bit of insight into our Configuration
 and how we're troubleshooting our Network. Our WiFi runs exclusively on Mikrotik
@@ -40,9 +40,11 @@ freedom to plan your LAN outlets and whatnot, or so we thought, but everything g
 differently as planned so those outlets are still a vision. We had to reverse engineer
 every single one of a bunch of cables because documentation of the existing Network was nonexistent.
 
-When we moved here, our Rack was neat and clean and there were almost no cables since
-then things have changed, all visible and non-visible LAN outlets were patched and if
-you spot one at our Colab feel free to use it.
+When we moved here, our Rack was neat and clean and there were almost no cables,
+we also had to install the cables by ourselves because our top floor was a dusty
+attic which looked like it hasn't been touched for the last half of the decade
+it didn't have any cabling at all. Since then all visible and non-visible LAN
+outlets were patched and if you spot an outlet at our Colab feel free to use it.
 
 ![Before and after](beforeAfter.jpg)
 
@@ -99,7 +101,6 @@ bad time, this is the point you have to realize that you obviously have another 
 of "things going well" (although you're right). At the moment we're having 20 AP's on 3
 Floors, serving over 300 clients during peak hours.
 
-
 ![ClientsPerAP](ClientsPerAP.jpg)
 
 With all those different devices and total freedom for our coworkers there are
@@ -107,19 +108,22 @@ always some people having connectivity issues nonetheless, so the bigger we get,
 the more important is that we know how to Monitor our Network and how to distribute
 the load that's hammering on our infrastructure.
 
-
 ![TrafficPerAP](TrafficPerAP.jpg)
 
 ## Monitoring
-It's also quite important to monitor your radio waves, so you can start investigating
+If you're responsible for something which quite a few people rely on every day, you
+as a Sysadmin should be able to tell someone where the Problem comes from.
+So it's quite important to monitor your radio waves, so you can start investigating
 rising issues before a lot of people are affected by it and to troubleshoot specific
-clients' issues. Having some Schools and offices around us, we're sometimes experiencing
+clients' issues.
+
+Having some Schools and offices around us, we're sometimes experiencing
 a peak in Traffic every time there's a bunch of Schoolboys in front of the Office
 watching YouTube and what not over our Free WiFi. Because that free WiFi is actually
 intended for the Visitors of the Co-Working Space it's important to drop Clients
 that are too far away (across the street inside the school building), that's why
 we're constantly monitoring our Frequencies and repositioning our AP's in order
-to supply our guests with a good connection.
+to supply our guests with a good connection (that's also where our fancy graphs come from).
 
 ![SignalStats](SignalStats.jpg)
 
