@@ -105,7 +105,7 @@ helpers do
     data.authors[article.data.author]['name']
   end
 
-  def get_full_post_url
-    File.join(config[:page_url],current_article.url)
+  def full_article_url(article)
+    File.join(config[:page_url], article.url)
   end
 end
