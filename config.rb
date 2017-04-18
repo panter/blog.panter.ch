@@ -40,6 +40,7 @@ activate :blog do |blog|
   blog.paginate = true
 end
 
+set :page_url, 'https://blog.panter.ch'
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 set :images_dir, 'images'
@@ -102,5 +103,9 @@ end
 helpers do
   def article_author(article)
     data.authors[article.data.author]['name']
+  end
+
+  def full_article_url(article)
+    File.join(config[:page_url], article.url)
   end
 end
