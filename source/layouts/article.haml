@@ -15,3 +15,10 @@
 
       %p
         = link_to '&laquo; Zurück zur Übersicht', '/', class: 'back'
+
+      %p{:class => "share"}
+        Share on
+        = link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{full_article_url(current_article)}"
+        = link_to 'Twitter', "https://twitter.com/intent/tweet?text=#{full_article_url(current_article)}"
+        = link_to 'LinkedIn', "https://www.linkedin.com/cws/share?url=#{full_article_url(current_article)}"
+        %a{ href: "mailto:?subject=#{current_article.title}&body=#{full_article_url(current_article)}" } Email
