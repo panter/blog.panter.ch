@@ -1,7 +1,7 @@
 # A sample Gemfile
 source "https://rubygems.org"
 
-gem "middleman"
+gem "middleman", '~> 3'
 gem "middleman-gh-pages"
 gem "middleman-blog"
 gem "middleman-livereload"
