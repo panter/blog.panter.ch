@@ -9,7 +9,7 @@ tags:
 
 The [GitHub flow](https://guides.github.com/introduction/flow/), or a similar
 Git strategy where the main work is done on feature branches which result in
-pull or merge requests, has become the standard way to
+pull or merge requests, have become the standard way to
 work with Git and GitHub or GitLab (or Bitbucket even) for many developer teams. Besides the main
 advantages of this way of working it also enables developers to keep a clean
 Git history (see also [5 rules to Git
