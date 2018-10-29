@@ -15,3 +15,6 @@ gem 'middleman-deploy'
 gem "nokogiri"
 gem "redcarpet"
 gem "builder"
+
+# work around https://github.com/toy/image_optim/pull/150
+gem "exifr", "~> 1.2.0"
