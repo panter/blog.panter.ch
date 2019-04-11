@@ -1,0 +1,40 @@
+---
+title: Bye-bye Panter Party
+date: 2019-04-11 14:50 UTC
+author: mib
+tags: panter party kraftwerk AI ML impacthub pantobot
+---
+Die Panter Party liegt nun schon einen Monat zurück: Zeit für einen ausführlichen Rückblick mit Videos, Bildern und auch ein paar Erklärungen – als IT-Unternehmen investieren wir in Artificial Intelligence und Machine Learning. Mit der Panter Party – ein Dankeschön an unsere Kunden, Partner und Freunde – zeigen wir auf spielerische Weise einen Use Case dazu, jedoch ohne explizit darüber zu sprechen. Wir hatten viel Spass bei der Vorbereitung und natürlich auch am Anlass selbst. Wir hoffen, es ist uns gelungen, diese Experience ins Zentrum zu rücken. Viel Spass beim Lesen!
+
+##Panter in action
+Panter ist weder eine Event-Agentur, und wir sind auch kein professioneller Party-Organisator. Was uns allerdings zur Verfügung steht, ist das gesamte Ökosystem des Impact Hub Zürich mit seiner wunderbaren Location, dem Kraftwerk. Wie sonst könnten wir – statt den üblichen Weihnachts-Aktionen – bestmöglich zeigen, was wir Tag für Tag leisten?
+<br>
+Der Entscheid, die Panter Party vollständig agil zu entwickeln, war selbstverständlich. Effektiv haben wir einen vollständigen Sprint eingesetzt, um aus dem Konzept das MVP (minimum viable product) – genau das, was wir alle erleben und hoffentlich genossen hatten – zu entwickeln. Dabei ging es neben den organisatorischen Fragen rund um die Location, Catering, Personal- und Ablaufplanung auch um die Einladung, das Onboarding via Website bzw. unseren “Panto-Bot”. Bei Panter sind wir immer auch auf der Suche nach den besten Team-Mitgliedern. Dank diesem Zugang wollen wir potenziell interessierten Personen vermitteln, wie wir mit innovativen Technologien und besonderen Anwendungsfällen umgehen. Alle aktuellen Jobs finden sich übrigens auf panter.ch/jobs.
+
+##Unsere Einladung
+Die Frage der Einladung war gleichzeitig auch der Auftakt zu einer personalisierten, AI-gestützten Experience, bei der Besucher sich individuell angesprochen fühlen sollten. So kam der Weihnachts-Gruss als “Save the date” mit einem Weihnachtsbaum-Anhänger per Brief und Post. Darauf folgte ein Email-Reminder mit Double opt-in zur Anmeldung zur Party, die Bestätigung wurde automatisch durch ein SMS durchgeführt, ausgelöst im Back-end. Ein kleiner Blick auf die Technologie: Wir hatten u.a. ein vue.js-Frontend und graphQL-Backend im Einsatz.
+<br>
+Die Authentifizierung per SMS führte schliesslich zum Konfigurator im Tinder-Stil, dem ersten Teil des Panto-Bots. Auch hier konnten wir dank automatischer Deployment-Prozessen sicherstellen, dass es keinerlei aussergewöhnliche Belastungen und zusätzliche Aufwände gab. Wichtig zu wissen für alle unsere Kunden: Derartige vollautomatisierte Prozesse sind nahezu (wir wissen, es gibt keine 100% Garantien) fehlerfrei und extrem ressourcenschonend. Damit verbleibt mehr Zeit (= Ressourcen = Budget) für Iterationen etwa bei Strategie, UX, Entwicklung und zusätzlichen Features. Am Ende bedeuten mehr Ressourcen mehr Möglichkeiten unternehmerischen Wert zu schaffen.
+
+##Daten verstehen
+Wir haben Daten gesammelt: Über die Anmeldungen, Rückantworten, die Antworten auf die Stimmungsbilder im Konfigurator (und damit die Präferenzen unserer Gäste hinsichtlich ihrer Menu-Vorlieben), alle Getränke, etwa wer was und wie viel getrunken (oder für andere Gäste mitgenommen) hatte. Alle diese Daten werden demnächst selbstverständlich vernichtet. Es sind deine Daten: Ruf uns an, falls du wirklich Bescheid wissen willst… Hinsichtlich AI und ML macht ein einmaliges Event mit einer einmaligen Datensammlung wenig Sinn. Erst in der strukturierten Wiederholung der Erhebung lassen sich Erkenntnisse hinsichtlich Planung oder Besucherströme auswerten.
+<br>
+Überheblich wäre es übrigens auch zu sagen, wir könnten anhand von Stimmungsbildern aus dem Konfigurator im Tinder-Stil belastbare Rückschlüsse auf den Geschmack unserer Gäste ziehen. Dennoch gilt, dass neue Erkenntnisse auch neue Methoden benötigen: Wir hatten u.a. Personen, die beim Bild mit der Spinne "swipe right" (für “gefällt mir”) gewählt hatten, einen Superpunkt in der Gewichtung für den “Mut-Raum” gegeben.
+
+##Event-Räume
+Wir haben euch in sechs unterschiedlichen Stimmungen verpflegt:
+
+* **Mut**: Ein besonderer Raum, räumlich abgetrennt – es gab Insekten bis hin zu Innereien zu essen. Diese wurden innovativ und kreativ präsentiert. Eine echte Nerven- und Geschmacksprobe der experimentellen Küche für unsere Gäste.
+* **Omas Wohnzimmer**: Hier traf heimeliger Kitsch auf gutbürgerliche Küche, u.a. mit Suppe im Topf serviert, einem anständigen Brocken Siedfleisch und Kartoffeln, dazu geriebenem Meerrettich. Traditionell und einfach – ein wenig die Küche aus der Vergangenheit zum neu Verlieben!
+* **Street-Food-Market im Asia-Style**: Auf billigen Plastikstühlen und wackligen Tischen wurden asiatische Spezialitäten wie Noodle Boxes, Dumplings, Wan-tans und Lassis serviert. Akustisch und visuell wurde die Atmosphäre der asiatischen Märkte inszeniert und eine richtige Street-Food-Experience vermittelt.
+* **Noble**: An einer langen Tafel mit weissem gestärktem Tischtuch im Zentrum des grossen Raums im Kraftwerk wurden unsere Gäste wie Kaiserinnen und Könige mit exklusiven Köstlichkeiten verwöhnt. Purer Chic und Dekadenz prallten dabei im selben Raum auf die Hektik und Lautstärke des Asia-Markts, auf der anderen Seite fanden sich die Liebhaber von Omas Küche wieder.
+* **Wissenschaft**: Hier stand das besondere Erlebnis von Effekt- und Molekularküche im Vordergrund. Unsere Gäste waren vollauf beeindruckt davon, wie sich unsere alltägliche Nahrung verändert, wenn man sie mit flüssigem Stickstoff übergiesst. Angeleitet durch Dr. Marc Zinggeler, Life Science Engineering CSEM Basel, konnten wir einen Eindruck von den gastronomischen Möglichkeiten der Küche von morgen gewinnen.
+* **Schweigeraum**: Ein Dinner der Sinne: Das Abendessen wurde schweigend eingenommen! Als Geräuschkulisse dienten lediglich die Klänge der Gerichte, das Klimpern des Bestecks und der Teller und die Kau- und Schluckgeräusche beim Essen. Dadurch konnten sich die Gäste auf den Geschmack und das Aussehen der Gerichte fokussieren – und dazu gab es auch einen kleinen Skandal...
+
+##Event-Kommunikation
+Unsere Gäste wurden von unserem Panto-Bot durch den Abend geführt. Dafür benutzten wir eine klein Mock-AI: Auf Basis von Natural Language Libraries und der dazugehörigen Sprachausgabe wurde die Moderation und alle Ankündigungen durchgeführt – inklusive dem Erzählen von schlechten Witzen nach dem Essen – ja, die schlechten Witze waren wirklich schlecht. Aber immerhin hatten sich unsere Gäste dem Vernehmen nach noch schlechtere Witze erzählt – ein weiteres Element, wie sich die User Experience eines Event-Abends zu einem grossen Ganzen fügt.
+<br>
+Die personalisierten Kärtchen, welche unsere Gäste bei der Ankunft erhielten, waren neben einem QR-Code zum Erfassen von Getränken mit einem Symbol aus Space Invaders versehen. Über zwei identische Symbole konnten sich neue Gesprächspartner finden lassen: Habt ihr euren Partner gefunden? Auch hier hatten wir eine Datengrundlage auf Basis des Konfigurators gelegt (erinnert ihr euch an die ersten Testbilder?). In anderen weiteren Kontexten liessen sich auf eine solche spielerische Weise Match-Making unter Teilnehmenden unterstützen, etwa indem man Tischnachbarn zuordnen könnte.
+
+##Proof of Concept – frag uns!
+Die Panter Party war neben dem Dankeschön an unsere Kunden, Partner und Freunde eben auch ein Hands-on Case von angewandter AI, ML und der Umsetzung eines MVP. Es hat uns Spass gemacht unsere Fähigkeiten im Rapid Prototyping anzuwenden. Solltest du also in deiner Organisation einen Partner für den PoC (Proof of Concept) von Early-Stage Innovationsprojekten suchen, kontaktiere uns gern unter 044 500 29 04 bzw. hello@panter.ch
