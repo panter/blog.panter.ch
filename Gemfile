@@ -6,7 +6,6 @@ gem "middleman-gh-pages"
 gem "middleman-blog"
 gem "middleman-livereload"
 gem "middleman-syntax"
-gem "rack", ">= 1.6.11"
 
 gem 'middleman-favicon-maker'
 gem 'middleman-imageoptim'
