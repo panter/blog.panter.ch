@@ -5,9 +5,9 @@
 bundle install
 ```
 
-## Create a new article
-Create new articles in git branches called `articles/xx-yy-zz`. You can then
-start a review process by submitting a PR on github if needed.
+## Create a new article 
+Create new articles in git branches `git checkout -b articles/dd-mm-yyyy` called `articles/xx-yy-zz`. 
+You can then start a review process by submitting a PR on github if needed.
 
 The following will create a boilerplace article with a properly named file
 and some meta-data in `sources`:
