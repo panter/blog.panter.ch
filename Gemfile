@@ -13,7 +13,7 @@ gem 'middleman-imageoptim'
 gem 'image_optim_pack'
 gem 'middleman-deploy'
 
-gem "nokogiri"
+gem "nokogiri", ">= 1.10.4"
 gem "redcarpet"
 gem "builder"
 
