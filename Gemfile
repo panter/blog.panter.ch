@@ -2,7 +2,7 @@
 source "https://rubygems.org"
 
 gem "middleman", '~> 4'
-gem "middleman-gh-pages"
+gem "middleman-rsync"
 gem "middleman-blog", '~> 4'
 gem "middleman-livereload"
 gem "middleman-syntax"
@@ -12,7 +12,6 @@ gem "rake", ">= 12.3.3"
 gem 'middleman-favicon-maker'
 gem 'middleman-imageoptim'
 gem 'image_optim_pack'
-gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 gem "nokogiri", ">= 1.11.4"
 gem 'redcarpet', '>= 3.5.1'

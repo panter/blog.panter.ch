@@ -83,15 +83,11 @@ configure :build do
   activate :gzip
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method = :rsync
-  deploy.host = 'blog.panter.ch'
+activate :rsync do |deploy|
+  deploy.production_server = 'blog.panter.ch'
   deploy.user = 'panterch'
-  deploy.clean = true
-
   deploy.path = 'blog.panter.ch'
-
-  deploy.flags = '-avz'
+  deploy.rsync_flags = '--compress --archive --delete -v'
 end
 
 configure :development do
