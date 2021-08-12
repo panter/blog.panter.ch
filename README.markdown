@@ -25,5 +25,5 @@ Your key needs to be added to the Server by an Admin.
 
 ```
 bundle exec middleman build  # Compile all files into the build directory
-bundle exec middleman rsync production  # Build and publish to Github Pages
+bundle exec middleman rsync production  # Build and publish to blog.panter.ch
 ```
