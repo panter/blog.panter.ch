@@ -2,3 +2,9 @@
   RewriteCond %{HTTPS} !=on
   RewriteRule (.*) https://%{SERVER_NAME}/$1 [R=301,L]
 </IfModule>
+
+<IfModule mod_headers.c>
+  Header add Content-Security-Policy "default-src 'self';"
+  Header set X-Content-Type-Options nosniff
+  Header set X-Frame-Options SAMEORIGIN
+</IfModule>

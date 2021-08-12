@@ -84,7 +84,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.method = :rsync
+  deploy.deploy_method = :rsync
   deploy.host = 'blog.panter.ch'
   deploy.user = 'panterch'
   deploy.clean = true
